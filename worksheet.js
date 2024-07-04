@@ -145,4 +145,81 @@ const a = 1;
 const af = 2;
 const afr = 3;
 g = Array.of(a, af, afr);
-console.log(g);
+console.log(g); 
+
+
+//                                  #### OBJECT
+
+
+const person = {
+    name: 'John',
+    age: 34,
+    isAdmin: true,
+};
+
+console.log(person);
+
+// accessing specific property in object
+
+h = person.name;
+h1 = person['age'];	
+console.log(h, h1);
+
+// object within an object
+const person1 = {
+    name: 'John',
+    age: 34,
+    isAdmin: true,
+    address: {
+        street:'John Street',
+        city: 'Lagos',
+        country: 'Nigeria',
+
+    },
+    Hobbies: ['music', 'cooking', 'reading']
+};
+console.log(person1);
+
+//accessing a nested object e.g display 34, lagos and cooking
+
+h2 = person1.age;
+h3 = person1.address.city;
+h4 = person1.Hobbies[1];
+
+console.log(h2, h3, h4);
+
+// change the value in object e.g (John to Daniel) and isAdmin = false 
+
+person1.name = 'Daniel';
+person1.isAdmin = false;
+
+// automatically add property to object
+
+person1.hasChildren = true;
+console.log(person1);
+
+// create a function in an object 
+person1.greet = function() {
+    console.log(`Hello my name is ${person1.name}, i am ${person1.age} years old and live in ${person1.address.city}`);
+};
+console.log(person1.greet());
+
+
+//when creating keys with two words 
+person2 = {
+    'Date of Birth' : '2000',
+};
+h5 = person2['Date of Birth'];
+console.log(person2, h5);
+ 
+
+//                                  #### OBJECT SPREAD OPERATOR AND METHODS 
+
+
+
+
+
+
+
+
+
