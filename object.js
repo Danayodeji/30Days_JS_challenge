@@ -95,3 +95,86 @@ console.log(q);
 q = todo.hasOwnProperty('name');
 console.log(q);
 
+    
+// DESTRUCTURING AND NAMING = useful in situation where the value is same as key in an object (example below👇)
+
+// first RENAMING
+
+const firstName = 'Daniel';
+const lastName = 'Obamiyi';
+const age = 15;
+const city = 'Lagos';
+const gender = 'Male';	
+const email = 'daniel@gmail.com';
+
+const person5 = {
+    firstName : firstName,
+    lastName : lastName,
+    age : age,
+    city : city,
+    gender : gender,
+    email : email,  
+};
+console.log(person5);
+
+// applying renaming would go like this 👇👇
+const person6 = {
+    firstName,
+    lastName,
+    age,
+    city,
+    gender,
+    email,
+};
+console.log(person6); // still work like this saving typing time and code complexity
+
+                          // DESTRUCTURING 
+
+const todo3 ={
+    id : 1,
+    title : 'Take out trash',
+    userName: {
+        name : 'Ayoddeji',
+     },
+}
+
+// destructuring (inverting the position of object variable and its properties to modify the properties) is more like pulling a variable from the object, letting the key act like a variable whereas it's not (example👇👇) the properties to be destructured comes first while the variable is at the end.
+
+const {
+    id,
+    title,
+     userName: {name}, // Note: 👈This is destructuring 
+    } = todo3;
+
+console.log(id, title, name);
+
+// using destructuring i could also RENAME the KEYS which is also the properties 
+
+const {
+    id: todo3id, // 👈This is renaming 
+    title: todo3title,
+} = todo3;
+
+console.log(todo3id, todo3title );
+
+
+        // DESTRUCTURING ON ARRAYS
+
+const number = [23, 67, 33, 49];
+const [firs, secon] = number;
+
+console.log(firs, secon); // this will display the first two element in the array. Now here the crazy part😖, if i want to automatically display the remaining elements in an array i will you the REST OPERATOR. This operator (REST OPERATOR) can be a bit confusing because it represented by (...), same as SPREAD OPERATOR in this context however, the (...) works as the REST OPERATOR😆 
+
+// using the REST OPERATOR
+const num = [1, 2, 3, 4, 5, 6, 7, 8];
+const [first, second, third, ...rest] = num; // distructuring automatically assigns variable for each element in an array ('rest' can be anythinggit)
+
+console.log(first, second, rest); 
+
+
+
+
+
+
+
+
