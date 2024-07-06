@@ -1,6 +1,6 @@
 // USING SPREAD OPERATOR WITH OBJECT 
 
-   // creating empty objectin 2 ways 
+   // creating empty object in 2 ways 
 
    const todo = {};
    todo.id = 1;
@@ -66,7 +66,7 @@ console.log(q);
 q = todos[2].name;
 console.log(q);
 
-// how to collect all objects keys and store them into arra... this is the way to get the length of an object since the lenght method does not work on objects but works on arrays. storing the keys of an object in an array will make it possibe to get the length of the object's properties
+// how to collect all objects keys and store them into array... this is the way to get the length of an object since the lenght method does not work on objects but works on arrays. storing the keys of an object in an array will make it possibe to get the length of the object's properties
 
 q = Object.keys(todo);
 console.log(q);
@@ -158,7 +158,7 @@ const {
 console.log(todo3id, todo3title );
 
 
-        // DESTRUCTURING ON ARRAYS
+        // DESTRUCTURING IN ARRAYS
 
 const number = [23, 67, 33, 49];
 const [firs, secon] = number;
@@ -167,7 +167,7 @@ console.log(firs, secon); // this will display the first two element in the arra
 
 // using the REST OPERATOR
 const num = [1, 2, 3, 4, 5, 6, 7, 8];
-const [first, second, third, ...rest] = num; // distructuring automatically assigns variable for each element in an array ('rest' can be anythinggit)
+const [first, second, third, ...rest] = num; // distructuring automatically assigns variable for each element in an array ('rest' can be anything)
 
 console.log(first, second, rest); 
 
