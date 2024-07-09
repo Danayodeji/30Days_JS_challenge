@@ -106,7 +106,47 @@ if(true) {
 // example with simple for-loop
 
 for (let i = 0; i <= 10; i++) {
-    console.log(i); // 'i' is a block scope variable and cannot be used outside that for-loop block
+    console.log(i); // let and const are block scope based and cannot be used outside that for-loop block
+}
+/* let and const are block scope while var is a function scope  */
+
+
+//NESTED SCOPE 
+
+//only nested function can access any variable that is in parent function scope,  the parent function cannot access the variables inside the child's function scope. see example below 
+function first() {
+    const x = 100;
+
+    function second() {
+        const y = 200;
+        console.log(x + y);
+    }
+    second(); 
+}
+first();
+
+// this example show similarity with block. only nested block can access any variable that is inside a parent block scope,  the parent block cannot access the variables inside the child's block scope. see example below 
+if (true) {
+    const x = 100;
+     
+    if (x === 100){
+        const y = 200;
+        console.log(x + y);
+    }      
 }
 
+// CREATING FUNCTIONS WITH FUNCTION EXPRESSION VS DECLARATION
 
+// function declaration
+function addDollarSign(value) {
+    return '$' + value
+}
+console.log(addDollarSign(100));
+
+ // function expression = function in a variable 
+ const addPlusSign = function (value) {
+    return '+' + value;
+ };
+ console.log(addPlusSign(200));
+
+ // Hoisting = means that variable and function declarations are moved to the top of their containing scope during the compile phase. This means you can use functions and variables before they are declared in the code
