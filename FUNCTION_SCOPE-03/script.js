@@ -149,4 +149,43 @@ console.log(addDollarSign(100));
  };
  console.log(addPlusSign(200));
 
- // Hoisting = means that variable and function declarations are moved to the top of their containing scope during the compile phase. This means you can use functions and variables before they are declared in the code
+ // Hoisting =  means that variable and function declarations are moved to the top of their containing scope during the compile phase. This means you can use functions and variables before they are declared in the code. 
+
+
+
+ // CALL STACK
+
+ // /first exampla
+
+/* 
+function first() {
+    console.log('first');
+ }
+ function second() {
+    console.log('second');
+ }
+function third() {
+    console.log('third');
+}
+
+first();
+second();
+third(); 
+*/
+
+// second example
+
+function first() {
+    console.log('first');
+    second();
+ }
+ function second() {
+    console.log('second');
+    third();
+ }
+function third() {
+    console.log('third');
+}
+
+first();
+
