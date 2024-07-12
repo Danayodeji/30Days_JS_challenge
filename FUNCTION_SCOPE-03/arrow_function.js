@@ -43,13 +43,28 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 numbers.forEach( function (n) { 
     console.log(n);                     // normal array function
 });
+
+
 // modern approach
 const number = [1, 2, 3, 4, 5, 6, 7, 8];
 number.forEach(i => console.log(i));     // arrow function array
 
 
 
+
+
+ /*
+ Things i have learned from this section are:
+ - arrow functions is removing the function keyword and curly brackets in arrow functions
+ - shorter arrow function example = removing the return keyword and the curly brackets
+- implicit return (one-liner return)
+ - removing the function keyword and curly brackets in arrow functions
+ - example with a single parameter = removing the parentheses on the parameter
+ - example when returning an object = arrow points to ({})
  
+ */
+
+
 
 
 
