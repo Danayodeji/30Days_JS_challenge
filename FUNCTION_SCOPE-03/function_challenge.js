@@ -51,9 +51,11 @@ getCelsius5(32);
 
 
 /*
-2. Creat an arrow function called minMax () that takes in an array of numbers and returns an object with the minimum and maximum numbers in the array.
+2. Create an arrow function called minMax () that takes in an array of numbers and returns an object with the minimum and maximum numbers in the array.
+
 Expected Result:
 console. log (minMak( [1, 2, 3, 4, 51));
+
 // { min: 1, max: 5 }
 Hints:
 1. You can use Math.min() and Math.max() to get the min and max of a list of numbers.
@@ -69,4 +71,30 @@ function minMax(arr) {
 }
  console.log(minMax([1, 2, 3, 4, 51]));
 
-// SOLUTION IN ARROW FUNCTION
+  
+
+/*
+3. Create an IIFE (Immediately Invoked Function Expression) that takes in the length and width of a rectangle outputs it to the console in a message as soon as the page loads.
+
+Expected Result:
+// On page load the area of a rectangle with a length of 10 and a width c
+
+Hints:
+
+1. The area of a rectangle is length * width. These should get passed into the IIFE as arguments.
+You do not have to return anything from this function, just log to the console.
+*/
+// solution with arrow function
+
+const lengthWidth = (length, width) => {
+    const area = length * width;
+    console.log(area);
+};
+lengthWidth(4, 5); 
+
+// IIFE with arrow function
+
+((length, width) => {
+    const area = length * width;     // IIFE 
+    console.log(area);
+})(4, 5);
