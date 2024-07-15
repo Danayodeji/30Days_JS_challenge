@@ -82,7 +82,7 @@ Expected Result:
 Hints:
 
 1. The area of a rectangle is length * width. These should get passed into the IIFE as arguments.
-You do not have to return anything from this function, just log to the console.
+2. You do not have to return anything from this function, just log to the console.
 */
 // solution with arrow function
 
@@ -95,6 +95,10 @@ lengthWidth(4, 5);
 // IIFE with arrow function
 
 ((length, width) => {
-    const area = length * width;     // IIFE 
-    console.log(area);
-})(4, 5);
+    const area = length * width;     
+    
+    const output = `The area of a rectangle with a length ${length} and a width of ${width} is ${area} `;     // IIFE 
+    
+    console.log(output);
+
+ })(4, 5);
