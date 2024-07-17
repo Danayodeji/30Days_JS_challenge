@@ -35,7 +35,7 @@ if (x) {
 
 // TRUTHY AND FALSY CAVEATS
 
-//CAVEAT 1:
+//CAVEAT 1: CHECKING FOR FALSY VALUES eg 0
 
 const children = 0;
 
