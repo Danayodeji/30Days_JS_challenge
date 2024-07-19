@@ -50,7 +50,7 @@ const name = [ 'Brad', 'Daniel', 'Ayomide', 'Faith', 'John', 'Sarah'];
 
 for (let c = 0; c < name.length; c++) {
 
-    if (c == 2){ // use the index directly or put the value in a s
+    if (c == 2){ // use the index directly or put the value in a string
         console.log(`${name[c]} is the best`);
     } else {
         console.log(name[c]);
