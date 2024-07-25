@@ -72,7 +72,7 @@ const squareAndDouble2 = numbers
         return sqrt * 2;
     })
     .map (function(sqrtdouble) {
-        return Math.round(sqrtdouble);
+        Math.round(sqrtdouble);
     })
 
     // chaining different methods 
@@ -81,4 +81,4 @@ const squareAndDouble2 = numbers
 
     numbers
     .filter((number) => number % 2 ===0)
-    .map((num) => num * 2)
+    .map((num) => num * 2);
